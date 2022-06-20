@@ -1,78 +1,102 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <title>Yurtaev IV</title>
-</head>
-<body>
-    <table>
-        <tr>
-            <td><a href="http://rambler.ru"><img src="avatar.jpg" width="200"><a/></td>
-            <td>
-                <h1>Юртаев Игорь</h1>
-                <p><em>Учусь на <strong>Webdeveloper</strong></em></p>
-                <p><em>Люблю семью, еду, спорт, природу!!!</em></p>
-            </td>
-        </tr>
-    </table>
-    <hr>
-    <h2>Мои социальные сети</h2>
-    <ul>
-        <li><a href="https://ya.ru" target="_blank">Яндекс</a></li>
-        <li><a href="https://mail.ru" target="_blank">МаилРУ</a></li>
-        <li><a href="autobiography.html" target="_blank">Автобиография</a></li>
-    </ul>
-    <hr>
-    <h2>Мои хобби</h2>
-    <ol>
-        <li>Семья</li>
-        <li>Еда</li>
-        <li>Здоровье</li>
-        <li>Канада</li>
-    </ol>
-    <hr>
-    <h2>Опыт работы</h2>
-    <table cellspacing="10">
-        <tr>
-            <th>№</th>
-            <th>Место работы</th>
-            <th>Должность</th>
-            <th>Период работы</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>КГК</td>
-            <td>Лаборант</td>
-            <td>2004-2008</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Технопласт</td>
-            <td>Сборщик</td>
-            <td>2009-2011</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Башинформсвязь</td>
-            <td>Электромонтер</td>
-            <td>2011-2012</td>
-        </tr>
-    </table>
-    <hr>
-    <h2>Связаться со мной</h2>
-    <form action="/">
-        <label for="name">Ваше имя</label>
-        <input type="text" id="name" placeholder="введите имя">
-        <br>
-        <br>
-        <label for="email">Ваш email</label>
-        <input type="email" id="email" placeholder="введите email">
-        <br>
-        <br>
-        <label for="text">Ваше сообщение:</label>
-        <textarea name="text" id="" cols="30" rows="2"></textarea>
-        <br>
-        <br>
-        <input type="submit" value="Связаться">
-    </form>
-</body>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Yurtaev IV</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="info">
+                <img src="avatar.jpg" class="ava" />
+
+                <div class="info-text">
+                    <h1>Юртаев Игорь</h1>
+                    <p>Учусь на <strong>Webdeveloper</strong></p>
+                    <p>Я люблю путешестовать, заниматься спортом и программировать</p>
+                    
+                    <h4>Мои социальные сети</h4>
+                    
+                    <a href="https://ya.ru" target="_blank">Яндекс</a>
+                    |
+                    <a href="https://mail.ru" target="_blank">МаилРУ</a>
+                </div>
+            </div>
+            <div class="card bg-yellow">
+                <h2>Мои хобби</h2>
+                <ol class="list">
+                    <li>Семья</li>
+                    <li>Еда</li>
+                    <li>Здоровье</li>
+                    <li>Канада</li>
+                </ol>
+            </div>
+          
+
+            <div class="card bg-green">
+                <h2>Опыт работы</h2>
+                <table class="table">
+
+                    <tr>
+                        <td>КГК</td>
+                        <td>Лаборант</td>
+                        <td>2004-2008</td>
+                    </tr>
+                    <tr>
+                        <td>Технопласт</td>
+                        <td>Сборщик</td>
+                        <td>2009-2011</td>
+                    </tr>
+                    <tr>
+                        <td>Башинформсвязь</td>
+                        <td>Электромонтер</td>
+                        <td>2011-2012</td>
+                    </tr>
+                    <tr>
+                        <td>Газпром</td>
+                        <td>Инженер</td>
+                        <td>2012-now</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="card bg-red">
+                <h2>YouTube курсы</h2>
+                <ul class="link-list">
+                    <li>
+                        <a href="https://youtube.com" target="_blank">Курсы по HTML</a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com" target="_blank">Курсы по CSS</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h2>Связаться со мной</h2>
+                <form action="/">
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="name">Ваше имя:</label>
+                            <input type="text" placeholder="введите имя...">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Ваш email:</label>
+                            <input type="email" placeholder="введите email...">
+                        </div>
+                    </div>
+                    
+                     <div class="form-group">
+                        <label for="text">Ваше сообщение...:</label>
+                        <textarea name="text" id="" cols="30" rows="2"></textarea>
+                    </div>
+                    <input class="btn" type="submit" value="Связаться!">  
+                </form>
+            </div>
+
+            <div class="position">
+                <div class="box"></div>
+            </div>
+
+        </div>   
+        <div style="margin-bottom: 100px;;"></div> 
+    </body>
 </html>
