@@ -1,4 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500");
+
+.container_calc {
+    position: relative;
+    display: inline-block;
+    padding: 0px 5px 0px 5px;
+    cursor: pointer;
+}
+
+.container_calc:hover {
+    text-decoration: underline;
+  }
+
+.container_calc_span {
+    font-size: 16px;
+
+}
+
+.select-dropdown {
+    margin: 0;
+    padding: 0px 5px 0px 5px;
+}
+
+.select-dropdown__button {
+  background-color: var(--dropdown-background);
+  color: var(--dropdown-text-color);
+  border: 1px solid var(--dropdown-border-color);
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+}
+
+.select-dropdown__button:hover {
+  text-decoration: underline;
+}
+
+.select-dropdown__list {
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  max-height: 300px;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--dropdown-border-color);
+  border-top: 0px solid transparent;
+  list-style-type: none;
+  opacity: 0;
+  pointer-events: none;
+  transform-origin: top left;
+  transform: scale(1, 0);
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+}
+
+.select-dropdown__list.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1, 1);
+}
+
+.select-dropdown__list-item {
+  display: block;
+  list-style-type: none;
+  padding: 10px 15px;
+  background: var(--dropdown-background);
+  border-top: 1px solid var(--dropdown-border-color);
+  font-size: 16px;
+  line-height: 1.4;
+  cursor: pointer;
+  color: #616161;
+  text-align: left;
+  transition: all ease-in-out 0.3s;
+}
+
+.select-dropdown__list-item:hover,
+.select-dropdown__list-item.selected {
+  background-color: var(--primary-color);
+  color: var(--main-text-color);
+}
+
+.select-dropdown {
+  position: relative;
+  display: inline-block;
+  /* max-width: 100%;
+  margin: 0 15px 0 0; */
+}
+
 
 body {
     background-color: #f1f1f1;
@@ -8,13 +98,18 @@ body {
     font-family: 'Roboto', sans-serif;
     }
 
+.select-dropdown {
+    color: black;
+}
+
 a {
-        color: black;
-        text-decoration: none;
-    }
+    padding: 0px 5px 0px 5px;
+    color: black;
+    text-decoration: none;
+}
 
 a:hover {
-        text-decoration: underline;
+    text-decoration: underline;
     }
     
 a:active {
@@ -22,7 +117,7 @@ a:active {
     }
     
 a:visited {
-        color: grey;
+        color: black;
     }
 
 .ava {
@@ -172,15 +267,23 @@ border-radius: 20px;
     opacity: 0.9;
 }
 
-/* .position {
-    border: 4px solid black;
-    margin-top: 40px;
-    padding: 20px;
-} */
+.name-calc {
+    padding: 10px 10px 10px 10px;
+}
 
-/* .box {
-    position: static;
-    width: 50px;
-    height: 50px;
-    background: lightcoral;
-} */
+.divMAinCalc {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    margin: auto;
+    background: #fff9dc;
+}
+
+.divCalc {
+    margin: auto;
+    width: 50%;
+}
+
+.buttonCalc {
+    margin: 3px 3px 3px 3px;
+}
