@@ -120,7 +120,7 @@ class CustomSelect {
 
 
   const customSelect = new CustomSelect("123", options);
-  const mainContainer = document.querySelector(".info-text");
+  const mainContainer = document.querySelector(".menu");
 
 
   function setCalc () {

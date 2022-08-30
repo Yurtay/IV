@@ -269,6 +269,7 @@ border-radius: 20px;
 
 .name-calc {
     padding: 10px 10px 10px 10px;
+    width: 100%;
 }
 
 .divMAinCalc {
@@ -287,3 +288,4 @@ border-radius: 20px;
 .buttonCalc {
     margin: 3px 3px 3px 3px;
 }
+
