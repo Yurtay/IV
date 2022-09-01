@@ -277,15 +277,88 @@ border-radius: 20px;
     margin-bottom: 20px;
     border-radius: 20px;
     margin: auto;
-    background: #fff9dc;
 }
 
 .divCalc {
+    background: #000;
     margin: auto;
-    width: 50%;
+    width: 300px;
 }
 
-.buttonCalc {
-    margin: 3px 3px 3px 3px;
+.buttonDigit {
+    height: 50px;
+    width: 25%;
+    margin: 0;
 }
 
+.buttonSquare {
+    height: 50px;
+    width: 25%;
+    margin: 0;
+}
+.buttonBackSpace {
+    height: 50px;
+    width: 25%;
+    margin: 0;
+}
+
+.buttonRoot {
+    height: 50px;
+    width: 25%;
+    margin: 0;
+}
+
+.buttonClean {
+    height: 50px;
+    width: 25%;
+    margin: 0;
+}
+
+.buttonResult {
+    height: 50px;
+    width: 25%;
+    margin: 0;
+}
+
+.name-calc{
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.spanNameCalc {
+    display:block;
+    width: 220px;
+    padding: 5px 0px 5px 0px;
+    margin: 0 auto;
+    color: yellow;
+}
+
+.calc_input {
+    background: #352424;
+    width: 270px;
+    height: 50px;
+    padding: 0px 5px 0px 5px;
+    margin: 10px 10px 10px 10px;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
+.buttonStyle {
+    border: none;
+    color: rgb(224, 150, 150);
+    background: #000;
+    font-size: 22px;
+}
+
+.buttonNumberStyle {
+    color: white;
+    font-size: 24px;
+}
+
+.buttonStyle:active {
+    border-radius: 5px;
+    background: rgb(94, 81, 40);
+    font-size: 30px;
+}
