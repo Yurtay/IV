@@ -147,7 +147,7 @@ export function runingCalc () {
         let result = inputValue.value
 
         let firstNumb = parseFloat(result)
-        result = result.split(firstNumb).join('')
+        result = result.replace(firstNumb, '')
         let arrayMathOperatorAndSecondNumb = result.match(/\+|-|\*|\/|\d+/g)
         let mathOperator = arrayMathOperatorAndSecondNumb[0]
         let secondNubm = parseFloat(result.split(mathOperator).join(''))
@@ -177,7 +177,7 @@ export function runingCalc () {
         } else if (!isFinite(result)) {
             inputValue.value = `  division by zero is not possible`
         } else {
-           inputValue.value = result
+           inputValue.value = result.toFixed(5)
         }
     }
 
