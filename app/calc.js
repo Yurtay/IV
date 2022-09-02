@@ -9,7 +9,7 @@ export function runingCalc () {
           divSpanNameCalc = document.createElement('div'),
           divCalc = document.createElement('div')
 
-          spanNameCalc.textContent = 'My first calculator JS (ver. 2.0)'
+          spanNameCalc.textContent = 'My first calculator JS (ver. 2.1)'
           spanNameCalc.className = 'spanNameCalc'
           divMain.className = 'divMAinCalc'
           divCalc.className = 'divCalc'
@@ -146,71 +146,32 @@ export function runingCalc () {
         
         let result = inputValue.value
 
-        let b = result.match(/\+|-|\*|\/|\d+/g)
+        let firstNumb = parseFloat(result)
+        result = result.split(firstNumb).join('')
+        let arrayMathOperatorAndSecondNumb = result.match(/\+|-|\*|\/|\d+/g)
+        let mathOperator = arrayMathOperatorAndSecondNumb[0]
+        let secondNubm = parseFloat(result.split(mathOperator).join(''))
+        console.log(firstNumb, mathOperator, secondNubm)
 
-        if (b) {
-            if (b[0] == '-') {
-                const symbolMinus = '-'
-                for (let i=1; i < b.length; i++) {
-                    if (i===1) {
-                        result = symbolMinus + parseInt(b[i])
-                    }
-                        switch (b[i])
-                        {
-                        case '+' :
-                        result += parseInt(b[i+1])
-                        ++i
-                        break
-                        
-                        case '-':
-                        result -= parseInt(b[i+1])
-                        ++i
-                        break
-                        
-                        case '/': 
-                        result /= parseInt(b[i+1]) 
-                        ++i;
-                        break
-                        
-                        case '*':
-                        result *= parseInt(b[i+1]); 
-                        ++i
-                        break
-    
-                    }
-                }
-            } else {
-                for (let i=0; i < b.length; i++) {
-                    if (i===0) {result = parseInt(b[i])}
-        
-                        switch (b[i])
-                        {
-                        case '+' :
-                        result += parseInt(b[i+1])
-                        ++i
-                        break
-                        
-                        case '-':
-                        result -= parseInt(b[i+1])
-                        ++i
-                        break
-                        
-                        case '/': 
-                        result /= parseInt(b[i+1]) 
-                        ++i;
-                        break
-                        
-                        case '*':
-                        result *= parseInt(b[i+1]); 
-                        ++i
-                        break
-    
-                    }
-                }
+            switch (mathOperator)
+            {
+            case '+' :
+                result = firstNumb + secondNubm
+            break
+
+            case '-':
+                result = firstNumb - secondNubm
+            break
+            
+            case '/': 
+            result = firstNumb / secondNubm
+            break
+            
+            case '*':
+                result = firstNumb * secondNubm
+            break
             }
 
-        } 
-                
         if (isNaN(result)) {
             inputValue.value = `  result is not defined`
         } else if (!isFinite(result)) {
