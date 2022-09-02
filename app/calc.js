@@ -177,7 +177,7 @@ export function runingCalc () {
         } else if (!isFinite(result)) {
             inputValue.value = `  division by zero is not possible`
         } else {
-           inputValue.value = result.toFixed(5)
+           inputValue.value = result
         }
     }
 
